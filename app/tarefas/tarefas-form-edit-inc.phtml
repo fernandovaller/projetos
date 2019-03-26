@@ -1,0 +1,40 @@
+<form id="form-tarefas" method="post" action="/pages/tarefas-action?acao=atualizar" class="mt40" enctype="multipart/form-data" >
+  <input type="hidden" name="id" value="<?=$row['id']?>" >
+  <div class="row">
+
+
+    <div class="form-group col-sm-9">
+      <label>Descrição</label>     
+      <input type="text" name="descricao" class="form-control" multiple="2" value="<?=$row['descricao']?>" placeholder="Descrição" required>        
+    </div>    
+
+    <div class="form-group col-sm-3">          
+      <label>Projeto</label>      
+      <select name="id_projeto" id="id_projeto" class="form-control select2" required>
+        <option value=""></option>
+        <?=form_select_array(App\Projeto::getAll(), 'id', 'descricao', $row['id_projeto'])?>
+      </select>      
+    </div>  
+
+    <div class="form-group col-sm-12">
+      <label>Observações</label>            
+      <textarea name="obs" id="editor" rows="5" cols="40" class="form-control"><?=$row['obs']?></textarea>      
+    </div>
+   
+  </div>
+  
+  <div class="modal-footer">
+    <small class="text-muted pull-left">Tarefa criada em <?=data_hora($row['data'])?></small>
+    <button type="button" class="btn btn-default mr20" data-dismiss="modal">Cancelar</button>              
+    <button type="submit" class="btn btn-success"><i class="fa fa-check fa-fw"></i> Salvar</button>            
+  </div>
+  
+</form>
+
+<script>  
+$(function() {
+  ClassicEditor.create( document.querySelector( '#editor' ) ).catch( error => {
+    console.error( error );
+  });
+});
+</script>

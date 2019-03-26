@@ -1,0 +1,32 @@
+<?php 
+if($tarefas) 
+  foreach ($tarefas as $row) :  
+   $checked = ($row['status'] == '1') ? 'checked' : '';
+?>
+<tr id="RT<?=$row['id']?>">
+
+  <td style="border-left: 5px solid <?=$row['cor']?>;">          
+    <div class="checkbox">
+      <input type="checkbox" name="id_tarefas[]" value="<?=$row['id']?>" id="#<?=$row['id']?>" data-status="<?=$row['status']?>" class="tarefa-check-uncheck" <?=$checked?>>
+      <label for="#<?=$row['id']?>" title="Marcar como concluída">&nbsp;</label>
+    </div>                              
+  </td>
+
+  <td>
+    <p class="fs-14 mb0"><?=$row['descricao']?></p>      
+    <span class="small text-muted"><em><?=strlimit($row['obs'], 20)?></em></span>
+  </td>
+
+  <td width="100" class="text-center" style="background-color: <?=$row['cor']?>;"><?=$row['projeto']?></td>       
+
+  <td width="100" class="text-right">
+    <div class="btn-group">
+      <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações <span class="caret"></span></button>
+      <ul class="dropdown-menu">    
+        <li><a href="#modal-tarefas" data-toggle="modal" class="btn-edit-tarefa" data-id="<?=$row['id']?>">Editar</a></li>
+        <li><a href="javascript:void(0);" class="tarefa-delete" data-id="<?=$row['id']?>">Excluir</a></li>
+      </ul>
+    </div>
+  </td>
+</tr>
+<?php endforeach; ?>

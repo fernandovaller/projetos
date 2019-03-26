@@ -1,0 +1,19 @@
+{
+    "name": "fernandovaller/sicpages",
+    "authors": [
+        {
+            "name": "Fernando Valler",
+            "email": "fernandovaller@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.5"
+    },
+    "autoload":{
+        "psr-4":{
+            "System\\": "system/class/",
+            "App\\":"app/class/"
+        }
+    }
+
+}

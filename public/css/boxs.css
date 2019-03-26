@@ -1,0 +1,248 @@
+
+.checkbox + .checkbox, .radio + .radio {
+    margin-top: 0;	
+}
+.radio, .checkbox {
+    width: auto;
+    display: block;
+    float: none;
+    margin: auto;
+    padding-left: 0;
+}
+.radio label, .checkbox label {
+    width: auto !important;
+    float: left !important;
+    /* margin: 10px 5px 0 0; */
+}
+.radio label {
+    box-sizing: border-box;
+    text-indent: 1px;
+    line-height: 19px;		
+}
+.radio input[type=radio][disabled]+label:after {
+    background-color: #eceff3;
+}
+.radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+    color: #777a80;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+    margin-bottom: 5px;
+}
+.radio label.strong {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2196f3;
+}
+.radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    position: absolute;
+    left: 1px;
+    top: 1.4px;
+    background-color: #ffffff;
+    border: 1px solid #c2c6cb;
+    border-radius: 3px;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+}
+.radio label::after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 3.2px;
+    top: 0px;
+    font-size: 11px;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+}
+.radio label:after {
+    border-radius: 3px;
+}
+.radio input[type=radio] {
+    display: none;
+}
+.radio label:after {
+    border-radius: 99px;
+}
+.radio label:before {
+    border-radius: 99px;
+}
+.radio input[type=radio]:checked+label {
+    color: #4d5056;
+}
+.radio input[type=radio]:checked+label::after {
+    font-family: 'FontAwesome';
+    content: "\F00C";
+}
+.radio input[type=radio][disabled]+label {
+    opacity: 0.65;
+}
+.radio input[type=radio][disabled]+label:before {
+    background-color: #eceff3 !important;
+    border: 1px solid #eceff3 !important;
+}
+.radio.check-success input[type=radio]:checked+label:before {
+    background-color: #0090d9;
+    border: 1px solid #0090d9;
+}
+.radio.check-success input[type=radio]:checked+label::after {
+    color: #ffffff;
+}
+.radio input[type=radio]:checked+label:before {
+    background-color: #0aa699;
+    border: 1px solid #0aa699;
+}
+.radio input[type=radio]:checked+label::after {
+    color: #ffffff;
+}
+.radio.check-info input[type=radio]:checked+label:before {
+    background-color: #1f3853;
+    border: 1px solid #1f3853;
+}
+.radio.check-info input[type=radio]:checked+label::after {
+    color: #ffffff;
+}
+.radio.check-warning input[type=radio]:checked+label:before {
+    background-color: #fbb05e;
+    border: 1px solid #fbb05e;
+}
+.radio.check-warning input[type=radio]:checked+label::after {
+    color: #ffffff;
+}
+.radio.check-danger input[type=radio]:checked+label:before {
+    background-color: #f35958;
+    border: 1px solid #f35958;
+}
+.radio.check-danger input[type=radio]:checked+label::after {
+    color: #ffffff;
+}
+
+.checkbox input[type=radio][disabled]+label:after {
+    background-color: #eceff3;
+}
+.checkbox label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    /* padding-left: 25px; */
+    /* font-size: 13px; */
+    color: #777a80;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+    /* margin-bottom: 10px; */
+}
+.checkbox:not(.checkbox-switchery) label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0px;
+    top: 1.4px;
+    background-color: #ffffff;
+    border: 1px solid #c2c6cb;
+    border-radius: 3px;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+}
+.checkbox label::after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 3.2px;
+    top: 0px;
+    font-size: 11px;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;    
+}
+.checkbox label:after {
+    border-radius: 3px;
+}
+.checkbox input[type=checkbox] {
+    display: none;
+}
+.checkbox input[type=checkbox]:checked+label {
+    color: #4d5056;
+}
+.checkbox input[type=checkbox]:checked+label::after {
+    font-family: 'FontAwesome';
+    content: "\F00C";
+    line-height: 19px;
+}
+.checkbox input[type=checkbox][disabled]+label {
+    opacity: 0.65;
+}
+.checkbox input[type=checkbox][disabled]+label:before {
+    background-color: #eceff3;
+}
+.checkbox.check-success input[type=checkbox]:checked+label:before {
+    background-color: #0090d9; border: 1px solid #0090d9; 
+}
+.checkbox.check-success input[type=checkbox]:checked+label::after {
+    color: #ffffff;
+}
+.checkbox input[type=checkbox]:checked+label:before {
+    /* background-color: #0aa699; border: 1px solid #0aa699; */
+    background-color: #fff; border: 1px solid #ccc;
+}
+.checkbox input[type=checkbox]:checked+label::after {
+    color: #555;
+}
+.checkbox.check-info input[type=checkbox]:checked+label:before {
+    background-color: #1f3853;
+    border: 1px solid #1f3853;
+}
+.checkbox.check-info input[type=checkbox]:checked+label::after {
+    color: #ffffff;
+}
+.checkbox.check-warning input[type=checkbox]:checked+label:before {
+    background-color: #fbb05e;
+    border: 1px solid #fbb05e;
+}
+.checkbox.check-warning input[type=checkbox]:checked+label::after {
+    color: #ffffff;
+}
+.checkbox.check-danger input[type=checkbox]:checked+label:before {
+    background-color: #f35958;
+    border: 1px solid #f35958;
+}
+.checkbox.check-danger input[type=checkbox]:checked+label::after {
+    color: #ffffff;
+}
+.radio .label-all,
+.checkbox .label-all{
+    color: #31b0d5;    
+}
+.radio .label-pending,
+.checkbox .label-pending {
+    color: #FF9800;    
+}
+.radio .label-draft,
+.checkbox .label-draft {
+    color: #9AAAB5;
+}
+.radio .label-paid,
+.checkbox .label-paid,
+.radio .label-partially_paid,
+.checkbox .label-partially_paid,
+.radio .label-completed,
+.checkbox .label-completed{
+    color: #0EC54F;
+}
+.radio .label-canceled,
+.checkbox .label-canceled,
+.radio .label-waiting,
+.checkbox .label-waiting{
+    color: #d2322d;
+}
+
+.radio .label-expired,
+.checkbox .label-expired{
+    color: #9AAAB5;
+}
