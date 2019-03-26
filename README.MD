@@ -1,9 +1,6 @@
-# SicPages
+# Projetos
 
-O SicPages é um simples Framework em php usado como base para o desenvolvimento de novos projetos. Possui um conceito simples e prático.
-
-  - Separação de áreas (sistemas) por pasta
-  - Dentro de cada área temos os modulos separados por pastas e em cada pasta os arquivos resposveis pelo modulo.
+Sistema para controle de tarefas dos projetos.
 
 ## Installation & Usage
 
