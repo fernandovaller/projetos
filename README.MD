@@ -16,11 +16,20 @@ Após crie o banco de dados de acordo com a estrutura fornecida no diretório `a
 
 Execute o composer na raiz do projeto para instalar as dependências necessárias:
 
-	`$ compose install`
+	$ compose install
+
+Criar o usuário para o primeiro acesso.	
+
+	INSERT INTO `usuarios` (`id`, `nome`, `email`, `login`, `senha`, `data_acesso`, `status`) VALUES (1, 'Demonstração', 'demo@email.com', 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', '2019-03-27 08:40:58', '1');
+
+Faça login com o usuário criado:
+
+	Usuário: demo
+	Senha: demo
 
 Para execultar rode:
 
-	`$ php -S localhost:8080`
+	$ php -S localhost:8080
 
 ## Contribuindo
 
